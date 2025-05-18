@@ -1,5 +1,3 @@
-// AxerBoost Colors
-
 $ui-primary: var(--ui-primary, hsla(215, 100%, 95%, 1));
 $ui-secondary: var(--ui-secondary, hsla(215, 75%, 95%, 1));
 $ui-tertiary: var(--ui-tertiary, hsla(215, 50%, 90%, 1));
