@@ -15,6 +15,9 @@ import videoSensingInsetIconURL from './videoSensing/video-sensing-small.svg';
 import text2speechIconURL from './text2speech/text2speech.png';
 import text2speechInsetIconURL from './text2speech/text2speech-small.svg';
 
+import axerAIIconURL from './AxerAI.svg'
+import axerAIInsetIconURL from './InsetAxerAI.png'
+
 import translateIconURL from './translate/translate.png';
 import translateInsetIconURL from './translate/translate-small.png';
 
@@ -225,6 +228,18 @@ const menuItems = [
         customInsetColor: '#9A66FF',
         tags: ['scratch'],
         description: 'Bring words to life.',
+        featured: true
+    },
+    {
+        name: 'AxerAI',
+        extensionId: 'axerai',
+        iconURL: axerAIIconURL,
+        insetIconURL: axerAIInsetIconURL,
+        customInsetColor: '#76244D',
+        tags: ['ai', 'axer'],
+        description: 'Bring your AI assistant to life with AxerAI.',
+        extDeveloper: 'Cooldevv1',
+        credits: 'Banner by Axer-',
         featured: true
     },
     {
