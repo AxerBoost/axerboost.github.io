@@ -232,8 +232,7 @@ const menuItems = [
     },
     {
         name: 'AxerAI',
-        extensionId: 'https://static.staticsave.com/hithere/extension.js',
-        iconURL: axerAIInsetIconURL,
+        extensionId: 'axerai',
         insetIconURL: axerAIIconURL,
         customInsetColor: '#76244D',
         tags: ['ai', 'axer'],
