@@ -192,7 +192,7 @@ const menuItems = [
         tags: ['scratch', 'noisemaker'],
         description: (
             <FormattedMessage
-                defaultMessage="Play instruments and drums."
+                defaultMessage="Make some noise with instruments and drums."
                 description="Description for the 'Music' extension"
                 id="gui.extension.music.description"
             />
@@ -238,8 +238,7 @@ const menuItems = [
         customInsetColor: '#76244D',
         tags: ['ai', 'axer'],
         description: 'Bring your AI assistant to life with AxerAI.',
-        extDeveloper: 'Cooldevv1',
-        credits: 'Banner by Axer-',
+        extDeveloper: 'AxerBoost',
         featured: true
     },
     {
