@@ -53,7 +53,9 @@ import EditIcon from '@mui/icons-material/Edit';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ShareIcon from '@mui/icons-material/Share';
 import InfoIcon from '@mui/icons-material/Info';
-import ErrorIcon from '@mui/icons-material/ErrorOutline';
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
+
+import Tooltip from '@mui/material/Tooltip';
 
 class MenuBar extends React.Component {
     constructor(props) {
@@ -115,85 +117,104 @@ class MenuBar extends React.Component {
                 <div className={styles.mainMenu}>
                     <div className={styles.fileGroup}>
                         {/* Home/Logo Button */}
-                        <Button
-                            className={classNames(styles.menuBarButton)}
-                            onClick={this.props.onClickLogo}
-                        >
-                            <HomeIcon />
-                        </Button>
-                        {/* New Project */}
-                        <Button
-                            className={classNames(styles.menuBarButton)}
-                            onClick={this.handleClickNew}
-                        >
-                            <AddBoxIcon />
-                        </Button>
-                        {/* Save */}
-                        {this.props.canSave && (
+                        <Tooltip title="Home">
                             <Button
                                 className={classNames(styles.menuBarButton)}
-                                onClick={this.handleClickSave}
+                                onClick={this.props.onClickLogo}
                             >
-                                <SaveIcon />
+                                <HomeIcon />
                             </Button>
+                        </Tooltip>
+                        {/* New Project */}
+                        <Tooltip title="New Project">
+                            <Button
+                                className={classNames(styles.menuBarButton)}
+                                onClick={this.handleClickNew}
+                            >
+                                <AddBoxIcon />
+                            </Button>
+                        </Tooltip>
+                        {/* Save */}
+                        {this.props.canSave && (
+                            <Tooltip title="Save">
+                                <Button
+                                    className={classNames(styles.menuBarButton)}
+                                    onClick={this.handleClickSave}
+                                >
+                                    <SaveIcon />
+                                </Button>
+                            </Tooltip>
                         )}
                         {/* Save as Copy */}
                         {this.props.canCreateCopy && (
-                            <Button
-                                className={classNames(styles.menuBarButton)}
-                                onClick={this.handleClickSaveAsCopy}
-                            >
-                                <FileCopyIcon />
-                            </Button>
+                            <Tooltip title="Save as Copy">
+                                <Button
+                                    className={classNames(styles.menuBarButton)}
+                                    onClick={this.handleClickSaveAsCopy}
+                                >
+                                    <FileCopyIcon />
+                                </Button>
+                            </Tooltip>
                         )}
                         {/* Remix */}
                         {this.props.canRemix && (
-                            <Button
-                                className={classNames(styles.menuBarButton)}
-                                onClick={this.handleClickRemix}
-                            >
-                                <RefreshIcon />
-                            </Button>
+                            <Tooltip title="Remix">
+                                <Button
+                                    className={classNames(styles.menuBarButton)}
+                                    onClick={this.handleClickRemix}
+                                >
+                                    <RefreshIcon />
+                                </Button>
+                            </Tooltip>
                         )}
                         {/* Edit */}
-                        <Button
-                            className={classNames(styles.menuBarButton)}
-                            onClick={this.props.onClickEdit}
-                        >
-                            <EditIcon />
-                        </Button>
-                        {/* Settings */}
-                        <Button
-                            className={classNames(styles.menuBarButton)}
-                            onClick={this.handleClickSettings}
-                        >
-                            <SettingsIcon />
-                        </Button>
-                        {/* Share */}
-                        <Button
-                            className={classNames(styles.menuBarButton)}
-                            onClick={this.handleClickShare}
-                        >
-                            <ShareIcon />
-                        </Button>
-                        {/* About */}
-                        <Button
-                            className={classNames(styles.menuBarButton)}
-                            onClick={this.props.onClickAbout}
-                        >
-                            <InfoIcon />
-                        </Button>
-                        {/* Error (only when errors exist) */}
-                        {this.props.compileErrors && this.props.compileErrors.length > 0 && (
+                        <Tooltip title="Edit">
                             <Button
                                 className={classNames(styles.menuBarButton)}
-                                onClick={this.props.onClickErrors}
+                                onClick={this.props.onClickEdit}
                             >
-                                <ErrorIcon />
+                                <EditIcon />
                             </Button>
+                        </Tooltip>
+                        {/* Settings */}
+                        <Tooltip title="Settings">
+                            <Button
+                                className={classNames(styles.menuBarButton)}
+                                onClick={this.handleClickSettings}
+                            >
+                                <SettingsIcon />
+                            </Button>
+                        </Tooltip>
+                        {/* Share */}
+                        <Tooltip title="Share">
+                            <Button
+                                className={classNames(styles.menuBarButton)}
+                                onClick={this.handleClickShare}
+                            >
+                                <ShareIcon />
+                            </Button>
+                        </Tooltip>
+                        {/* About */}
+                        <Tooltip title="About">
+                            <Button
+                                className={classNames(styles.menuBarButton)}
+                                onClick={this.props.onClickAbout}
+                            >
+                                <InfoIcon />
+                            </Button>
+                        </Tooltip>
+                        {/* Error (only when errors exist) */}
+                        {this.props.compileErrors && this.props.compileErrors.length > 0 && (
+                            <Tooltip title="Errors">
+                                <Button
+                                    className={classNames(styles.menuBarButton)}
+                                    onClick={this.props.onClickErrors}
+                                >
+                                    <ErrorOutlineIcon />
+                                </Button>
+                            </Tooltip>
                         )}
                     </div>
-                    {/* Optionally, you could add more icon-only buttons here if needed */}
                 </div>
                 <div className={styles.accountInfoGroup}>
                     <div className={styles.menuBarItem}>
@@ -231,7 +252,6 @@ MenuBar.defaultProps = {
 };
 
 const mapStateToProps = (state, ownProps) => {
-    const loadingState = state.scratchGui.projectState.loadingState;
     return {
         compileErrors: state.scratchGui.tw.compileErrors,
         canSave: state.scratchGui.projectState.canSave,
