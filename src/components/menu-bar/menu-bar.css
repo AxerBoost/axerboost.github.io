@@ -1,238 +1,233 @@
-@import "../../css/colors.css";
-@import "../../css/units.css";
-@import "../../css/z-index.css";
-
-.menu-bar {
+.menuBar {
+    background: #18191c;
+    color: #fff;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-
-    /*
-        For most things, we shouldn't explicitly set height, and let the
-        content push the element to whatever fits. Using a fixed height
-        instead, will help us subtract the value we assign from the body,
-        adding up to a perfect 100%. This means we don't need to set
-        overflow: hidden, which makes it hard to debug. border-box
-        simplifies by all of this by removing padding from the equation.
-    */
-    box-sizing: border-box;
-    height: $menu-bar-height;
-
-    /*
-        @todo: This adds ~20px in Chrome, when scrolling to the right,
-        but fixes [FFx + Safari] [resize window down + scroll to the right] bug.
-        width: 100%;
-    */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: $menu-bar-standard-font-size;
-    font-weight: bold;
-    background-color: $motion-primary;
-    color: $ui-white;
-}
-[theme="dark"] .menu-bar {
-    background-color: $motion-primary-dark;
-}
-
-.main-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
     align-items: center;
-    flex-grow: 1;
-}
-
-.scratch-logo {
-    height:  1.6rem;
-    vertical-align: middle;
-}
-
-.scratch-logo.clickable {
-    cursor: pointer;
-}
-
-.language-icon {
-    height:  1.5rem;
-    vertical-align: middle;
-}
-
-.language-caret {
-    margin: 0 .125rem;
-}
-
-.language-menu {
-    box-sizing: border-box;
-    display: inline-flex;
-    width: $language-selector-width;
-}
-
-.menu-bar-item {
-    display: flex;
-    padding: 0 0.25rem;
-    text-decoration: none;
-    color: $ui-white;
-    user-select: none;
-    align-self: center;
+    padding: 0 24px;
+    height: 64px;
+    border-bottom: 1px solid #232427;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     position: relative;
-    align-items: center;
-    white-space: nowrap;
-    height: $menu-bar-height;
+    z-index: 10;
 }
 
-.menu-bar-item.hoverable {
-    cursor: pointer;
-}
-
-.menu-bar-item.active,
-.menu-bar-item.hoverable:hover {
-    background-color: $ui-black-transparent;
-}
-
-.menu-bar-item.growable {
-    max-width: $menu-bar-item-max-width;
-    flex: 1;
-}
-
-.title-field-growable {
-    flex-grow: 1;
-    width: 2rem;
-}
-
-.file-group {
+.mainMenu {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    flex: 1;
+    gap: 16px;
 }
 
-.file-group .menu-bar-item {
-    padding: 0 0.75rem;
+.accountInfoGroup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
-.menu-bar-item.language-menu {
-    padding: 0 0.5rem;
+.menuBarItem {
+    display: flex;
+    align-items: center;
+    background: none;
+    border-radius: 8px;
+    padding: 0 10px;
+    height: 48px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.15s;
 }
 
-.menu-bar-menu {
-    margin-top: $menu-bar-height;
-    z-index: $z-index-menu-bar;
+.menuBarItem:focus,
+.menuBarItem:hover,
+.menuBarItem.active {
+    background: #232427;
 }
 
-.feedback-link {
-    color: $motion-primary !important;
+.menuBarButton,
+.feedbackButton {
+    background: #2476F2;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 18px;
+    height: 36px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.18s;
+    box-shadow: 0 1px 2px 0 rgba(36,118,242,0.05);
+}
+
+.menuBarButton:focus,
+.menuBarButton:hover,
+.feedbackButton:focus,
+.feedbackButton:hover {
+    background: #2A7FFF;
+}
+
+.menuItem {
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.14s;
     text-decoration: none;
 }
-[theme="dark"] .feedback-link {
-    color: $motion-primary-dark !important;
+
+.menuItem:hover,
+.menuItem:focus {
+    background: #232427;
+    color: #fff;
 }
 
-.feedback-button {
-    background-color: $ui-white;
-    height: 34px;
+.menuItemLink {
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    display: block;
+}
+
+.menuBarMenu {
+    background: #232427;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.25);
+    padding: 8px 0;
+    min-width: 220px;
+    border: 1px solid #262729;
+}
+
+.menuSection {
+    border-top: 1px solid #262729;
+    margin-top: 4px;
+    padding-top: 4px;
 }
 
 .divider {
-    margin: 0 .5rem;
+    width: 1px;
+    height: 40px;
+    background: #232427;
+    margin: 0 20px;
+}
+
+.scratchLogo {
+    width: 34px;
     height: 34px;
+    margin-right: 16px;
+    filter: brightness(1.2) grayscale(1) invert(1);
 }
 
-.author-info {
-    margin-left: .25rem;
-    margin-right: .6875rem;
+.languageIcon,
+.aboutIcon,
+.errorsMenu img,
+.menuBarItem img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(1.2) grayscale(1) invert(0.95);
+    margin-right: 8px;
 }
 
-.menu-bar-button {
-    height: $menu-bar-button-size;
+.languageCaret {
+    width: 10px;
+    height: 6px;
+    margin-left: 2px;
+    opacity: 0.7;
 }
 
-.remix-button {
-    background-color: $pen-primary
+.titleFieldGrowable {
+    background: #232427;
+    border: 1px solid #262729;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 12px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.13s;
 }
 
-.remix-button-icon {
-    height: 1.25rem;
+.titleFieldGrowable:focus {
+    border-color: #2476F2;
 }
 
-.coming-soon >:not(.coming-soon-tooltip) {
-    opacity: 0.5;
+.comingSoon,
+.comingSoonTooltip {
+    background: #232427 !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 3px 16px 0 rgba(0,0,0,0.25) !important;
+    border: 1px solid #262729 !important;
 }
 
-.account-info-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.remixButton {
+    background: #232427;
+    color: #fff;
+    border: 1px solid #262729;
+    padding: 0 18px;
+    height: 36px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-left: 6px;
+    transition: border 0.14s, background 0.14s;
 }
 
-.account-info-group .menu-bar-item {
-    padding: 0 0.75rem;
+.remixButton:hover,
+.remixButton:focus {
+    border: 1.5px solid #2476F2;
+    background: #1d1e21;
 }
 
-.mystuff-icon {
-    margin: 0 .25rem;
-    height: 1rem;
+.communityButtonWrapper {
+    margin-left: 12px;
 }
 
-.help-icon {
-    margin-right: 0.35rem;
-}
-
-.account-nav-menu, .mystuff-button {
-    padding: 0 .25rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.profile-icon {
-    margin: 0 .25rem;
-    width: $menu-bar-button-size;
-    border-radius: $form-radius;
-}
-
-.dropdown-caret-icon {
-    width: 0.5rem;
-    height: 0.5rem;
-}
-
-[dir="ltr"] .dropdown-caret-icon {
-    margin-left: .5rem;
-}
-
-[dir="rtl"] .dropdown-caret-icon {
-    margin-right: .5rem;
-}
-
-.disabled {
-    opacity: 0.5;
-}
-
-.mystuff > a {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 45%;
-  padding-right: 10px;
-  padding-left: 10px;
-  width: 30px;
-  overflow: hidden;
-  text-indent: 50px;
-  white-space: nowrap;
-}
-.mystuff > a:hover {
-  background-size: 50%;
-}
-
-.mystuff > a {
-  /* background-image: url("/images/mystuff.png"); */
-}
-
-.about-icon {
-    height: 1.25rem;
-    margin: 0.5rem;
-    vertical-align: middle;
-}
-
-/* tw: styles to override <a> styles */
-.menu-item-link {
-    color: $ui-white !important;
+.feedbackLink {
     text-decoration: none;
+}
+
+.feedbackButton {
+    background: #2476F2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 16px;
+    height: 36px;
+    cursor: pointer;
+    transition: background 0.18s;
+}
+
+.feedbackButton:hover,
+.feedbackButton:focus {
+    background: #2A7FFF;
+}
+
+.growable {
+    flex: 1 1 0%;
+    min-width: 160px;
+}
+
+.disabled,
+.menuItem.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #232427;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #18191c;
+    border-radius: 8px;
 }
