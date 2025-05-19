@@ -233,7 +233,7 @@ const menuItems = [
     {
         name: 'AxerAI',
         extensionId: 'axerai',
-        insetIconURL: axerAIIconURL,
+        insetIconURL: axerAIInsetIconURL,
         customInsetColor: '#76244D',
         tags: ['ai', 'axer'],
         description: 'Bring your AI assistant to life with AxerAI.',
