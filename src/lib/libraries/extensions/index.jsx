@@ -234,10 +234,8 @@ const menuItems = [
         name: 'AxerAI',
         extensionId: 'axerai',
         IconURL: axerAIInsetIconURL,
-        customInsetColor: '#76244D',
-        tags: ['ai', 'axer'],
+        tags: ['ai', 'axer', 'axerboost'],
         description: 'Bring your AI assistant to life with AxerAI.',
-        extDeveloper: 'AxerBoost',
         featured: true
     },
     {
@@ -867,6 +865,13 @@ const menuItems = [
         iconURL: jgJavascriptExtensionIcon,
         tags: ['penguinmod', 'programminglanguage'],
         description: 'Run your own custom code written in JavaScript!',
+        featured: true
+    },
+    {
+        name: 'Lua',
+        extensionId: 'luaexecutor',
+        tags: ['axerboost', 'programminglanguage'],
+        description: 'Run your own custom code written in Lua!',
         featured: true
     },
     {
