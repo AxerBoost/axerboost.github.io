@@ -55,7 +55,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import InfoIcon from '@mui/icons-material/Info';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
-import Tooltip from '@mui/material/Tooltip';
+// REMOVED: import Tooltip from '@mui/material/Tooltip';
 
 class MenuBar extends React.Component {
     constructor(props) {
@@ -117,102 +117,82 @@ class MenuBar extends React.Component {
                 <div className={styles.mainMenu}>
                     <div className={styles.fileGroup}>
                         {/* Home/Logo Button */}
-                        <Tooltip title="Home">
-                            <Button
-                                className={classNames(styles.menuBarButton)}
-                                onClick={this.props.onClickLogo}
-                            >
-                                <HomeIcon />
-                            </Button>
-                        </Tooltip>
+                        <Button
+                            className={classNames(styles.menuBarButton)}
+                            onClick={this.props.onClickLogo}
+                        >
+                            <HomeIcon />
+                        </Button>
                         {/* New Project */}
-                        <Tooltip title="New Project">
-                            <Button
-                                className={classNames(styles.menuBarButton)}
-                                onClick={this.handleClickNew}
-                            >
-                                <AddBoxIcon />
-                            </Button>
-                        </Tooltip>
+                        <Button
+                            className={classNames(styles.menuBarButton)}
+                            onClick={this.handleClickNew}
+                        >
+                            <AddBoxIcon />
+                        </Button>
                         {/* Save */}
                         {this.props.canSave && (
-                            <Tooltip title="Save">
-                                <Button
-                                    className={classNames(styles.menuBarButton)}
-                                    onClick={this.handleClickSave}
-                                >
-                                    <SaveIcon />
-                                </Button>
-                            </Tooltip>
+                            <Button
+                                className={classNames(styles.menuBarButton)}
+                                onClick={this.handleClickSave}
+                            >
+                                <SaveIcon />
+                            </Button>
                         )}
                         {/* Save as Copy */}
                         {this.props.canCreateCopy && (
-                            <Tooltip title="Save as Copy">
-                                <Button
-                                    className={classNames(styles.menuBarButton)}
-                                    onClick={this.handleClickSaveAsCopy}
-                                >
-                                    <FileCopyIcon />
-                                </Button>
-                            </Tooltip>
+                            <Button
+                                className={classNames(styles.menuBarButton)}
+                                onClick={this.handleClickSaveAsCopy}
+                            >
+                                <FileCopyIcon />
+                            </Button>
                         )}
                         {/* Remix */}
                         {this.props.canRemix && (
-                            <Tooltip title="Remix">
-                                <Button
-                                    className={classNames(styles.menuBarButton)}
-                                    onClick={this.handleClickRemix}
-                                >
-                                    <RefreshIcon />
-                                </Button>
-                            </Tooltip>
+                            <Button
+                                className={classNames(styles.menuBarButton)}
+                                onClick={this.handleClickRemix}
+                            >
+                                <RefreshIcon />
+                            </Button>
                         )}
                         {/* Edit */}
-                        <Tooltip title="Edit">
-                            <Button
-                                className={classNames(styles.menuBarButton)}
-                                onClick={this.props.onClickEdit}
-                            >
-                                <EditIcon />
-                            </Button>
-                        </Tooltip>
+                        <Button
+                            className={classNames(styles.menuBarButton)}
+                            onClick={this.props.onClickEdit}
+                        >
+                            <EditIcon />
+                        </Button>
                         {/* Settings */}
-                        <Tooltip title="Settings">
-                            <Button
-                                className={classNames(styles.menuBarButton)}
-                                onClick={this.handleClickSettings}
-                            >
-                                <SettingsIcon />
-                            </Button>
-                        </Tooltip>
+                        <Button
+                            className={classNames(styles.menuBarButton)}
+                            onClick={this.handleClickSettings}
+                        >
+                            <SettingsIcon />
+                        </Button>
                         {/* Share */}
-                        <Tooltip title="Share">
-                            <Button
-                                className={classNames(styles.menuBarButton)}
-                                onClick={this.handleClickShare}
-                            >
-                                <ShareIcon />
-                            </Button>
-                        </Tooltip>
+                        <Button
+                            className={classNames(styles.menuBarButton)}
+                            onClick={this.handleClickShare}
+                        >
+                            <ShareIcon />
+                        </Button>
                         {/* About */}
-                        <Tooltip title="About">
-                            <Button
-                                className={classNames(styles.menuBarButton)}
-                                onClick={this.props.onClickAbout}
-                            >
-                                <InfoIcon />
-                            </Button>
-                        </Tooltip>
+                        <Button
+                            className={classNames(styles.menuBarButton)}
+                            onClick={this.props.onClickAbout}
+                        >
+                            <InfoIcon />
+                        </Button>
                         {/* Error (only when errors exist) */}
                         {this.props.compileErrors && this.props.compileErrors.length > 0 && (
-                            <Tooltip title="Errors">
-                                <Button
-                                    className={classNames(styles.menuBarButton)}
-                                    onClick={this.props.onClickErrors}
-                                >
-                                    <ErrorOutlineIcon />
-                                </Button>
-                            </Tooltip>
+                            <Button
+                                className={classNames(styles.menuBarButton)}
+                                onClick={this.props.onClickErrors}
+                            >
+                                <ErrorOutlineIcon />
+                            </Button>
                         )}
                     </div>
                 </div>
@@ -272,7 +252,7 @@ const mapDispatchToProps = dispatch => ({
     onClickSave: () => dispatch(manualUpdateProject()),
     onClickSaveAsCopy: () => dispatch(saveProjectAsCopy()),
     onClickSettings: () => {
-        // open your settings modal here
+        // wip
     },
     onShare: () => { /* Share logic */ },
     onClickLogo: () => { window.location.href = '/'; },
