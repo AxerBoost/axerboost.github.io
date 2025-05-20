@@ -4,7 +4,7 @@
 A Scratch Mod created for https://github.com/axergraphics based off of PenguinMod, intended for graphic designers on Scratch.
 
 ### 📝 Contributions
-We welcome contributions! Please see CONTRIBUTIONS.md for information and contribution guidelines.
+We welcome contributions! Please see `CONTRIBUTIONS.md` for information and contribution guidelines.
 
 ### 📄 License
 AxerBoost is currently licensed under the GNU General Public License v3.0. Please see `LICENSE` for a copy of the license or [here](https://www.gnu.org/licenses/) for details.
