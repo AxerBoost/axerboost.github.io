@@ -28,9 +28,9 @@
     font-family: "Inter", Helvetica, Arial, sans-serif;
     font-size: $menu-bar-standard-font-size;
     font-weight: bold;
-    background-color: #23171A;
-    color: #FEF7F8;
-    padding: 2px;
+    background-color: #1F1F1F;
+    color: #FEE0EA;
+    padding: 5px;
 }
 
 .main-menu {
