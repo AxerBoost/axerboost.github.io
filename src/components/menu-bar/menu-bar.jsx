@@ -43,18 +43,6 @@ import collectMetadata from '../../lib/collect-metadata';
 import styles from './menu-bar.css';
 import scratchLogo from './scratch-logo.svg';
 
-// Material UI Icons
-import HomeIcon from '@mui/icons-material/Home';
-import AddBoxIcon from '@mui/icons-material/AddBox';
-import SaveIcon from '@mui/icons-material/Save';
-import FileCopyIcon from '@mui/icons-material/FileCopy';
-import RefreshIcon from '@mui/icons-material/Refresh';
-import EditIcon from '@mui/icons-material/Edit';
-import SettingsIcon from '@mui/icons-material/Settings';
-import ShareIcon from '@mui/icons-material/Share';
-import InfoIcon from '@mui/icons-material/Info';
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
-
 // REMOVED: import Tooltip from '@mui/material/Tooltip';
 
 class MenuBar extends React.Component {
@@ -121,14 +109,14 @@ class MenuBar extends React.Component {
                             className={classNames(styles.menuBarButton)}
                             onClick={this.props.onClickLogo}
                         >
-                            <HomeIcon />
+                            <span className="material-icons" aria-label="home">home</span>
                         </Button>
                         {/* New Project */}
                         <Button
                             className={classNames(styles.menuBarButton)}
                             onClick={this.handleClickNew}
                         >
-                            <AddBoxIcon />
+                            <span className="material-icons" aria-label="new project">add_box</span>
                         </Button>
                         {/* Save */}
                         {this.props.canSave && (
@@ -136,7 +124,7 @@ class MenuBar extends React.Component {
                                 className={classNames(styles.menuBarButton)}
                                 onClick={this.handleClickSave}
                             >
-                                <SaveIcon />
+                                <span className="material-icons" aria-label="save">save</span>
                             </Button>
                         )}
                         {/* Save as Copy */}
@@ -145,7 +133,7 @@ class MenuBar extends React.Component {
                                 className={classNames(styles.menuBarButton)}
                                 onClick={this.handleClickSaveAsCopy}
                             >
-                                <FileCopyIcon />
+                                <span className="material-icons" aria-label="save as copy">file_copy</span>
                             </Button>
                         )}
                         {/* Remix */}
@@ -154,7 +142,7 @@ class MenuBar extends React.Component {
                                 className={classNames(styles.menuBarButton)}
                                 onClick={this.handleClickRemix}
                             >
-                                <RefreshIcon />
+                                <span className="material-icons" aria-label="remix">refresh</span>
                             </Button>
                         )}
                         {/* Edit */}
@@ -162,28 +150,28 @@ class MenuBar extends React.Component {
                             className={classNames(styles.menuBarButton)}
                             onClick={this.props.onClickEdit}
                         >
-                            <EditIcon />
+                            <span className="material-icons" aria-label="edit">edit</span>
                         </Button>
                         {/* Settings */}
                         <Button
                             className={classNames(styles.menuBarButton)}
                             onClick={this.handleClickSettings}
                         >
-                            <SettingsIcon />
+                            <span className="material-icons" aria-label="settings">settings</span>
                         </Button>
                         {/* Share */}
                         <Button
                             className={classNames(styles.menuBarButton)}
                             onClick={this.handleClickShare}
                         >
-                            <ShareIcon />
+                            <span className="material-icons" aria-label="share">share</span>
                         </Button>
                         {/* About */}
                         <Button
                             className={classNames(styles.menuBarButton)}
                             onClick={this.props.onClickAbout}
                         >
-                            <InfoIcon />
+                            <span className="material-icons" aria-label="about">info</span>
                         </Button>
                         {/* Error (only when errors exist) */}
                         {this.props.compileErrors && this.props.compileErrors.length > 0 && (
@@ -191,7 +179,7 @@ class MenuBar extends React.Component {
                                 className={classNames(styles.menuBarButton)}
                                 onClick={this.props.onClickErrors}
                             >
-                                <ErrorOutlineIcon />
+                                <span className="material-icons" aria-label="error">error_outline</span>
                             </Button>
                         )}
                     </div>
