@@ -2,7 +2,7 @@
 @import "../../css/units.css";
 @import "../../css/z-index.css";
 
-@import 'material-icons/iconfont/material-icons.css';
+@import '../../node_modules/material-icons/iconfont/material-icons.css';
 
 .menu-bar {
     display: flex;
