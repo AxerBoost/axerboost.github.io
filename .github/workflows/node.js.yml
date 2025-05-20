@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install lucide-react
-        run: npm install lucide-react
+        run: npm install lucide-react --force
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup GitHub Pages
