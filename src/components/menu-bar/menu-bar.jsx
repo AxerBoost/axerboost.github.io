@@ -130,7 +130,7 @@ class MenuBar extends React.Component {
                         {this.props.canCreateCopy && this.props.onClickSaveAsCopy && (
                             <Button
                                 className={classNames(styles.menuBarButton)}
-                                onClick={this.handleClickSaveAsCopy}
+                                onClick={this.onClickSaveAsCopy}
                             >
                                 {/* SVG icon here */}
                                 <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -142,7 +142,7 @@ class MenuBar extends React.Component {
                         {this.props.canRemix && this.props.onClickRemix && (
                             <Button
                                 className={classNames(styles.menuBarButton)}
-                                onClick={this.handleClickRemix}
+                                onClick={this.onClickRemix}
                             >
                                 {/* SVG icon here */}
                                 <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -166,7 +166,7 @@ class MenuBar extends React.Component {
                         {this.props.onClickSettings && (
                             <Button
                                 className={classNames(styles.menuBarButton)}
-                                onClick={this.handleClickSettings}
+                                onClick={this.onClickSettings}
                             >
                                 {/* SVG icon here */}
                                 <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -179,7 +179,7 @@ class MenuBar extends React.Component {
                         {this.props.onShare && (
                             <Button
                                 className={classNames(styles.menuBarButton)}
-                                onClick={this.handleClickShare}
+                                onClick={this.onClickShare}
                             >
                                 {/* SVG icon here */}
                                 <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
