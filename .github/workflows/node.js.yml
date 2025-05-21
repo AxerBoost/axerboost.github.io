@@ -25,14 +25,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 6
       - name: Install more stuff
         run: npm install --save-dev babel-loader @babel/core @babel/preset-env @babel/preset-react --force
       - name: Install dependencies and build site
-        run: npm i -g pnpm@v6 && pnpm up && pnpm i --shamefully-hoist --force && NODE_ENV=production webpack --bail
-      - name: Install Material UI
-        run: npm install @mui/material @emotion/react @emotion/styled --force
+        run: pnpm up && pnpm i --shamefully-hoist --force && NODE_ENV=production webpack --bail
       - name: do things yes
-        run: npm i -g pnpm@v6 && pnpm up && pnpm i --shamefully-hoist --force && NODE_ENV=production webpack --bail --force
+        run: pnpm up && pnpm i --shamefully-hoist --force && NODE_ENV=production webpack --bail --force
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
