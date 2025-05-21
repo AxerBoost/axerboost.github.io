@@ -25,8 +25,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - name: Install lucide-react
-        run: npm install lucide-react --force
+      - name: Install Material UI
+        run: npm install @mui/material @emotion/react @emotion/styled
       - name: Install dependencies and build site
         run: npm i -g pnpm@v6 && pnpm up && pnpm i --shamefully-hoist --force && NODE_ENV=production webpack --bail
       - name: Upload artifact
