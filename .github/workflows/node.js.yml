@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 16.x
       - name: Install Material UI
-        run: npm install @mui/material @emotion/react @emotion/styled
+        run: npm install @mui/material @emotion/react @emotion/styled --force
       - name: Install dependencies and build site
         run: npm i -g pnpm@v6 && pnpm up && pnpm i --shamefully-hoist --force && NODE_ENV=production webpack --bail
       - name: Upload artifact
