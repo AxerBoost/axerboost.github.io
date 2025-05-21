@@ -7,11 +7,26 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { injectIntl } from 'react-intl';
 
-import { DynamicIcon } from 'lucide-react/dynamic';
-
 import Box from '../box/box.jsx';
 import Button from '../button/button.jsx';
 import TWSaveStatus from './tw-save-status.jsx';
+
+import Icon from '@mui/material/Icon' // Add Material Icons
+
+import IconButton from '@mui/material/IconButton'; // Add IconButton from MaterialUI
+import Tooltip from '@mui/material/Tooltip'; // Add Material Tooltip
+
+import HomeIcon from '@mui/icons-material/Home'; // Add Home Icon
+import NoteAddIcon from '@mui/icons-material/NoteAdd'; // Add New Note Icon
+import SaveIcon from '@mui/icons-material/Save'; // Add Save icon
+import FileCopyIcon from '@mui/icons-material/FileCopy'; // Add File Copy Icon
+import LeakAddIcon from '@mui/icons-material/LeakAdd'; // Add Leak Add Icon
+import PreviewIcon from '@mui/icons-material/Preview'; // Add Preview icon
+import SettingsIcon from '@mui/icons-material/Settings'; // Add Settings Icon
+import ShareIcon from '@mui/icons-material/Share'; // Add Share Icon
+import InfoIcon from '@mui/icons-material/Info'; // Add Info Icon
+import ErrorIcon from '@mui/icons-material/Error'; // Add Error icon
+import EditIcon from '@mui/icons-material/Edit'; // Add Edit Icon
 
 import { setPlayer } from '../../reducers/mode';
 import {
@@ -98,7 +113,11 @@ class MenuBar extends React.Component {
                                 onClick={this.props.onClickLogo}
                             >
                                 {/* SVG icon here */}
-                                <DynamicIcon name="house" />
+                                <Tooltip title="Home">
+                                    <IconButton>
+                                        <HomeIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </Button>
                         )}
                         {/* New Project */}
@@ -108,7 +127,11 @@ class MenuBar extends React.Component {
                                 onClick={this.handleClickNew}
                             >
                                 {/* SVG icon here */}
-                                <DynamicIcon name="file-plus" />
+                                <Tooltip title="New Project">
+                                    <IconButton>
+                                        <NoteAddIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </Button>
                         )}
                         {/* Save */}
@@ -118,7 +141,11 @@ class MenuBar extends React.Component {
                                 onClick={this.handleClickSave}
                             >
                                 {/* SVG icon here */}
-                                <DynamicIcon name="save" />
+                                <Tooltip title="Save">
+                                    <IconButton>
+                                        <SaveIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </Button>
                         )}
                         {/* Save as Copy */}
@@ -128,7 +155,11 @@ class MenuBar extends React.Component {
                                 onClick={this.onClickSaveAsCopy}
                             >
                                 {/* SVG icon here */}
-                                <DynamicIcon name="clipboard-copy" />
+                                <Tooltip title="Save as Copy">
+                                    <IconButton>
+                                        <FileCopyIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </Button>
                         )}
                         {/* Remix */}
@@ -138,7 +169,11 @@ class MenuBar extends React.Component {
                                 onClick={this.onClickRemix}
                             >
                                 {/* SVG icon here */}
-                                <DynamicIcon name="target" />
+                                <Tooltip title="Remix">
+                                    <IconButton>
+                                        <LeakAddIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </Button>
                         )}
                         {/* Edit */}
@@ -148,7 +183,11 @@ class MenuBar extends React.Component {
                                 onClick={this.props.onClickSeeInside}
                             >
                                 {/* SVG icon here */}
-                                <DynamicIcon name="eye" />
+                                <Tooltip title="Edit">
+                                    <IconButton>
+                                        <EditIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </Button>
                         )}
                         {/* Settings */}
@@ -158,7 +197,11 @@ class MenuBar extends React.Component {
                                 onClick={this.onClickSettings}
                             >
                                 {/* SVG icon here */}
-                                <DynamicIcon name="settings" />
+                                <Tooltip title="Settings">
+                                    <IconButton>
+                                        <SettingsIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </Button>
                         )}
                         {/* Share */}
@@ -168,7 +211,11 @@ class MenuBar extends React.Component {
                                 onClick={this.onClickShare}
                             >
                                 {/* SVG icon here */}
-                                <DynamicIcon name="share-2" />
+                                <Tooltip title="Share">
+                                    <IconButton>
+                                        <ShareIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </Button>
                         )}
                         {/* About */}
@@ -178,7 +225,11 @@ class MenuBar extends React.Component {
                                 onClick={this.props.onClickAbout}
                             >
                                 {/* SVG icon here */}
-                                <DynamicIcon name="info" />
+                                <Tooltip title="About">
+                                    <IconButton>
+                                        <InfoIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </Button>
                         )}
                         {/* Error (only when errors exist) */}
@@ -188,7 +239,11 @@ class MenuBar extends React.Component {
                                 onClick={this.props.onClickErrors}
                             >
                                 {/* SVG icon here */}
-                                <DynamicIcon name="triangle-alert" />
+                                <Tooltip title="Error">
+                                    <IconButton>
+                                        <ErrorIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </Button>
                         )}
                     </div>
