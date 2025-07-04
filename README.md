@@ -1,15 +1,15 @@
-# AxerBoost
+# Hexium Designer
 
 ### 🤔 What's this?
-A Scratch Mod created for https://github.com/axergraphics based off of PenguinMod, intended for graphic designers on Scratch.
+Hexium Designer is a program based off of PenguinMod that allows users to build anything from games, to apps, to programs to anything. Desktop application is currently a work in progress.
 
 ### 📝 Contributions
 We welcome contributions! Please see `CONTRIBUTIONS.md` for information and contribution guidelines.
 
 ### 📄 License
-AxerBoost is currently licensed under the GNU General Public License v3.0. Please see `LICENSE` for a copy of the license or [here](https://www.gnu.org/licenses/) for details.
+Hexium Designer is currently licensed under the GNU General Public License v3.0. Please see `LICENSE` for a copy of the license or [here](https://www.gnu.org/licenses/) for details.
 
-AxerBoost is a fork of [PenguinMod,](https://penguinmod.com/) which is a fork of [TurboWarp.](https://turbowarp.org/) We are also required to retain the original license of Scratch-WWW; which is NOT the license of this project.
+Hexium Designer is a fork of [PenguinMod,](https://penguinmod.com/) which is a fork of [TurboWarp.](https://turbowarp.org/) We are also required to retain the original license of Scratch-WWW; which is NOT the license of this project.
 
 ```
 Copyright (c) 2016, Massachusetts Institute of Technology
