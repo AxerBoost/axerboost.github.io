@@ -97,7 +97,7 @@
     "scratch-render-fonts": "github:PenguinMod/penguinmod-render-fonts#master",
     "scratch-storage": "github:PenguinMod/PenguinMod-Storage#develop",
     "scratch-svg-renderer": "github:TurboWarp/scratch-svg-renderer#develop",
-    "scratch-vm": "github:AxerBoost/AxerBoost-VM#develop",
+    "scratch-vm": "github:hexiumtechnologies/AxerBoost-VM#develop",
     "startaudiocontext": "1.2.1",
     "style-loader": "^0.23.1",
     "text-encoding": "0.7.0",
